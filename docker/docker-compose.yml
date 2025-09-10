@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  backend:
+    build: ./app/server
+    ports: ["8080:8080"]
+    volumes:
+      - ./app/server:/usr/src/app
+    working_dir: /usr/src/app
+    command: ["node","index.js"]
